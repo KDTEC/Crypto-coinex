@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Container, makeStyles, Typography } from "@material-ui/core";
+import {  makeStyles} from "@material-ui/core";
 import axios from "axios";
 import { TrendingCoins } from "../../config/api";
 import { CryptoState } from "../../CryptoContext";
 import AliceCarousel from "react-alice-carousel";
 import { Link } from "react-router-dom";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   carousel: {
     height: "50%",
     display: "flex",
@@ -36,6 +36,7 @@ const Carousel = () => {
 
   useEffect(() => {
     fetchTrendingCoins();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currency]);
 
   const items = trending.map((coin) => {
