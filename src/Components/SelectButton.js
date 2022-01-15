@@ -5,9 +5,9 @@ const SelectButton = ({ children, selected, onClick }) => {
     selectbutton: {
       border: "1px solid #93FFD8",
       borderRadius: 5,
-      padding: 10,
-      paddingLeft: 20,
-      paddingRight: 20,
+      padding: 7,
+      paddingLeft: 18,
+      paddingRight: 18,
       fontFamily: "Montserrat",
       cursor: "pointer",
       backgroundColor: selected ? "#93FFD8" : "",
@@ -17,8 +17,8 @@ const SelectButton = ({ children, selected, onClick }) => {
         backgroundColor: "#93FFD8",
         color: "black",
       },
-      width: "22%",
-      //   margin: 5,
+      width: "23%",
+        
     },
   });
 

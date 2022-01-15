@@ -16,7 +16,8 @@ import { useNavigate } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
 import Logo from "./logo.png";
 
-const useStyles = makeStyles((theme) => ({
+
+const useStyles = makeStyles(() => ({
   title: {
     flex: 1,
     color: "#5800FF",
@@ -24,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     cursor: "pointer",
   },
-  
 }));
 
 const Header = () => {
@@ -42,19 +42,19 @@ const Header = () => {
   });
   return (
     <ThemeProvider theme={darkTheme}>
-      <AppBar color="transparent" position="static" >
+      <AppBar color="transparent" position="static">
         <Container>
           <Toolbar>
-          <Box
-            component="img"
-            sx={{
-            height: 40,
-            marginLeft:-30,
-            marginRight:10,
-            }}
-            alt="Your logo."
-            src={Logo}
-        />
+            <Box
+              component="img"
+              sx={{
+                height: 40,
+                marginLeft: -30,
+                marginRight: 10,
+              }}
+              alt="Your logo."
+              src={Logo}
+            />
             <Typography
               onClick={() => history("/")}
               className={classes.title}
@@ -72,7 +72,7 @@ const Header = () => {
               value={currency}
               onChange={(e) => setCurrency(e.target.value)}
             >
-              <MenuItem value={"INR"}>INR</MenuItem>
+              <MenuItem value={"INR"}>INR </MenuItem>
               <MenuItem value={"USD"}>USD</MenuItem>
               <MenuItem value="GBP">GBP</MenuItem>
             </Select>
