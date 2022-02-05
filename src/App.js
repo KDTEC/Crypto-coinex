@@ -5,6 +5,7 @@ import CoinPage from "./Pages/CoinPage";
 import HomePage from "./Pages/HomePage";
 import { makeStyles } from "@material-ui/core";
 import Footer from "./Components/Footer";
+import Alert from "./Components/Alert";
 
 function App() {
   const useStyles = makeStyles(() => ({
@@ -25,6 +26,7 @@ function App() {
           <Route path="/coins/:id" element={<CoinPage />} exact/>
         </Routes>
         <Footer/>
+        <Alert />
       </BrowserRouter>
     </div>
   );
